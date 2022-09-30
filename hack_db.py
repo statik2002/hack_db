@@ -38,7 +38,7 @@ def remove_chastisements(schoolkid_name):
         print(f'К сожалению, не нашли такого ученика: {schoolkid_name}. Возможно опечатка.')
 
 
-def create_commendation(schoolkid_name, lesson_name, text='Хвалю'):
+def create_recommendation(schoolkid_name, lesson_name, text='Хвалю'):
 
     if not schoolkid_name:
         print('Не введено ФИО ученика! Введите ФИО')
