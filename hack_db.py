@@ -54,7 +54,6 @@ def create_recommendation(schoolkid_name, lesson_name, text='Хвалю'):
         chastisement = Chastisement.objects.create(text=text, schoolkid=schoolkid,
                                                    subject=lesson.subject, teacher=lesson.teacher,
                                                    created=lesson.date)
-        chastisement.save()
 
         print(f'У ученика {schoolkid_name} добавлено замечание {text} к последнему уроку {lesson_name}!')
 
