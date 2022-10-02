@@ -12,9 +12,7 @@ def fix_marks(schoolkid_name, make_mark=5):
 
         bad_marks = Mark.objects.filter(schoolkid=schoolkid.pk).filter(points__lt=4)
 
-        for mark in bad_marks:
-            mark.points = make_mark
-            mark.save()
+        bad_marks.update(points=make_mark)
 
         print(f'У ученика {schoolkid_name} все плохие оценки заменены на {make_mark}!')
 
