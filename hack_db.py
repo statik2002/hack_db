@@ -10,9 +10,9 @@ def fix_marks(schoolkid_name, make_mark=5):
     try:
         schoolkid = Schoolkid.objects.get(full_name=schoolkid_name)
 
-        all_bad_marks = Mark.objects.filter(schoolkid=schoolkid.pk).filter(points__lt=4)
+        bad_marks = Mark.objects.filter(schoolkid=schoolkid.pk).filter(points__lt=4)
 
-        for mark in all_bad_marks:
+        for mark in bad_marks:
             mark.points = make_mark
             mark.save()
 
