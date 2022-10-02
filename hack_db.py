@@ -1,5 +1,5 @@
 from django.core.exceptions import ObjectDoesNotExist
-from datacenter.models import *
+from datacenter.models import Schoolkid, Mark, Chastisement, Lesson
 
 
 def fix_marks(schoolkid_name, make_mark=5):
